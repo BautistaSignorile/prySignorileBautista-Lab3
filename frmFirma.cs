@@ -40,7 +40,16 @@ namespace prySignorileBautista_Lab3
 
         private void cmdGrabar_Click(object sender, EventArgs e)
         {
-            archivoImagen.Save("Experimento.jpg");
+            string Fecha = "", fechaHora = "", fechames = "", fechaAno = "", fechaminutos = "", fechaHoy = "";
+            Fecha = DateTime.Now.Day.ToString();
+            fechaHora = DateTime.Now.Hour.ToString();
+            fechames = DateTime.Now.Month.ToString();
+            fechaAno = DateTime.Now.Year.ToString();
+            fechaminutos = DateTime.Now.Minute.ToString();
+            fechaHoy = fechaAno + "." + fechames + "." + Fecha + " " + fechaHora + "." + fechaminutos;
+            archivoImagen.Save(@"../../../" + "/Firma" + fechaHoy + ".jpg");
+            MessageBox.Show("imagen guardada");
+
         }
 
         private void cmdVolver_Click(object sender, EventArgs e)
