@@ -47,7 +47,7 @@ namespace prySignorileBautista_Lab3
             fechaAno = DateTime.Now.Year.ToString();
             fechaminutos = DateTime.Now.Minute.ToString();
             fechaHoy = fechaAno + "." + fechames + "." + Fecha + " " + fechaHora + "." + fechaminutos;
-            archivoImagen.Save(@"../../../" + "/Firma" + fechaHoy + ".jpg");
+            archivoImagen.Save(@"../../../" + "/Firma/" + fechaHoy + ".jpg");
             MessageBox.Show("imagen guardada");
 
         }
